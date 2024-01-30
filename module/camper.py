@@ -26,7 +26,14 @@ def menu():
                 validate.menuNoVAlid(opc)
 
 def save():
-    return "Succesfully Camper"
+    info = {
+        "Nombre": input("Ingrese el nombre del camper\n"),
+        "Apellido": input("Ingrese el apellido del camper\n"),
+        "Edad": int(input("Ingrese la edad del camper\n")),
+        "Genero": input("Elija su genero:\n\t"+"\t".join([f"{generos.index(i)+1}. {i}\n" for i in sorted(generos)]))
+    }
+    camper.append(info)
+    return "Sucessfully Camper"
 
 def edit():
     return "Edit to Camper"
